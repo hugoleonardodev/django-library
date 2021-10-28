@@ -24,8 +24,11 @@ urlpatterns = [
 from django.conf.urls import include
 from django.urls import path
 
+from catalog.admin import admin_site
+
 urlpatterns += [
     path('catalog/', include('catalog.urls')),
+    path('myadmin/', admin_site.urls),
 ]
 
 #Add URL maps to redirect the base URL to our application
